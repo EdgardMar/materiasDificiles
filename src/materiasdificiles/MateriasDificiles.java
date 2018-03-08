@@ -34,11 +34,34 @@ public class MateriasDificiles extends MetodosSteve{
             
         }
         
+//        for (int i = 0; i < 4; i++) 
+//        {for (int j = 0; j < cantAlumnos; j++) 
+//            {
+//                imprimir (matriz[i][j]);
+//            }
+//            
+//        }
+        
+        int matematica=0;
+        int lengua=0;
+        int geografia=0;
+        int historia=0;
+        
         for (int i = 0; i < 4; i++) 
         {for (int j = 0; j < cantAlumnos; j++) 
+            if(i==0)
             {
-                imprimir (matriz[i][j]);
+                matematica=matematica+matriz[i][j];
             }
+            else if(i==1)
+                {
+                lengua=lengua+matriz[i][j];
+                }
+                else if(i==2)
+                {
+                geografia=geografia+matriz[i][j];
+                }
+                
             
         }
         
