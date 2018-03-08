@@ -21,26 +21,17 @@ public class MateriasDificiles extends MetodosSteve{
         // TODO code application logic here
         Random rand= new Random();
         int cantAlumnos=0;
-        int [] [] matriz= new int [4] [4];
         int nota=rand.nextInt(10);
         imprimir("ingrese cantidad de alumnos");
         cantAlumnos=tomarInt();
+        int [] [] matriz= new int [4] [cantAlumnos];
         
         for (int i = 0; i < 4; i++) 
         {for (int j = 0; j < cantAlumnos; j++) 
             {
                 matriz[i][j]=rand.nextInt(10);
             }
-            
         }
-        
-//        for (int i = 0; i < 4; i++) 
-//        {for (int j = 0; j < cantAlumnos; j++) 
-//            {
-//                imprimir (matriz[i][j]);
-//            }
-//            
-//        }
         
         int matematica=0;
         int lengua=0;
@@ -61,9 +52,17 @@ public class MateriasDificiles extends MetodosSteve{
                 {
                 geografia=geografia+matriz[i][j];
                 }
-                
-            
+                else if(i==3)
+                {
+                historia=historia+matriz[i][j];
+                }
         }
+        
+        
+        imprimir ("Matematicas= "+matematica/cantAlumnos);
+        imprimir ("Lengua= "+lengua/cantAlumnos);
+        imprimir ("Geografia= "+geografia/cantAlumnos);
+        imprimir ("Historia= "+historia/cantAlumnos);
         
     }
     
